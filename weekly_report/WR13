@@ -1,0 +1,8 @@
+Progress:
+* Verified the new MatMul algorithm and instructions with customized LLVM compiler and Spike simulator
+* Finished the RTL logic for decoding and the broadcast load instruction.
+* Here is a short explanation of the new MatMul algorithm. If we split the matrix multiplication into several matrix-vector multiplications and focus only on mat_a × vec_b, the new algorithm will load the elements in one column of mat_a into each lane equally and load vec_b from memory only once and broadcast it to each lane. (small demo)
+
+Next Week:
+* Finish RTL design for new instructions.
+* Test the performance effect of strided load/store operations.
